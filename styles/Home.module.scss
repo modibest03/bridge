@@ -1,0 +1,33 @@
+.tab {
+  background: rgba(57, 100, 250, 0.1);
+  border-bottom: 3px solid #3964fa !important;
+
+  &_wrapper {
+    margin-top: 2.4rem;
+    border-bottom: 1px solid #17282f;
+    font-size: 1.6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > div {
+      padding: 1.6rem;
+      padding-bottom: 3px;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+    }
+  }
+}
+
+.back {
+  font-size: 3.2rem;
+  margin-top: 3.2rem;
+  width: 20%;
+
+  & > a {
+    display: flex;
+    align-items: center;
+    column-gap: 1.6rem;
+  }
+}

@@ -1,0 +1,42 @@
+.container {
+  margin-top: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  padding: 4rem 3.2rem;
+  display: flex;
+  align-items: flex-start;
+  column-gap: 1.8rem;
+  width: 38.2rem;
+  background: #000e48;
+  border-radius: 16px;
+
+  &_text {
+    &_first {
+      color: #a0a5ba;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    &_last {
+      display: flex;
+      align-items: flex-end;
+      column-gap: 8px;
+      font-size: 3rem;
+
+      & > div {
+        &:last-child {
+          font-size: 1.6rem;
+          color: #00a71b;
+
+          & > span {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+}

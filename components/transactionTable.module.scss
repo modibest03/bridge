@@ -1,0 +1,88 @@
+.container {
+  margin-top: 2.4rem;
+}
+
+.table {
+  width: 100%;
+  border: none;
+}
+
+.th {
+  background-color: #000e48;
+  font-size: 1.6rem;
+  padding: 2rem 2.4rem;
+  text-align: left;
+}
+
+.td {
+  padding: 1.6rem;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #a0a5ba;
+  flex: 1;
+  //   line-height: 6.4rem;
+  //   height: 6.4rem;
+
+  &:first-child div {
+    display: flex;
+    align-items: center;
+    column-gap: 1.2rem;
+  }
+
+  &:nth-child(3) div span,
+  &:nth-child(4) div span {
+    display: block;
+
+    &:last-child {
+      color: #3964fa;
+    }
+  }
+
+  &:last-child div {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    color: #00a71b;
+  }
+}
+
+.pagination {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &_left {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  &_right {
+    display: flex;
+    column-gap: 8px;
+
+    & > button,
+    & > div {
+      background-color: #000e48;
+      border: none;
+      padding: 1.6rem;
+      color: #fff;
+      border-radius: 8px;
+    }
+  }
+}
+
+.input {
+  background-color: #000e48;
+  font-size: 1.6rem;
+  padding: 1.6rem;
+  width: 6.7rem;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+
+  &:focus {
+    outline: none;
+  }
+}
