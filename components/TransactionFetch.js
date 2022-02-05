@@ -3,11 +3,13 @@ import { chainNames } from '../utils/functions';
 import moment from 'moment';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import styles from './transactionTable.module.scss';
 
 const TransactionFetch = ({ data }) => {
   const router = useRouter();
+  //   const [text, setText] = useState('');
 
   return (
     <>
@@ -26,7 +28,11 @@ const TransactionFetch = ({ data }) => {
                   obj.pair_transaction.transaction_id?.length - 5
                 )}
               </span>
-              <Image src='/copy.png' alt='icon' width={16} height={16} />
+              <div onClick={(e) => e.stopPropagation()}>
+                <CopyToClipboard text={obj.transaction_id}>
+                  <Image src='/copy.png' alt='icon' width={16} height={16} />
+                </CopyToClipboard>
+              </div>
             </div>
           </td>
           <td className={styles.td}>NFT</td>

@@ -14,6 +14,8 @@ export default function Home() {
 
   const { allTransactions, isLoadingAllTransactions } = useGetAllTransactions();
 
+  console.log(allTransactions);
+
   return (
     <div className={styles.container}>
       <Head>
