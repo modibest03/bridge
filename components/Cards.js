@@ -3,14 +3,14 @@ import Image from 'next/image';
 
 import styles from './cards.module.scss';
 
-const Cards = () => {
+const Cards = ({ total }) => {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
         <Image src='/total.png' alt='Icon' width={40} height={40} />
         <div className={styles.card_text}>
           <div className={styles.card_text_first}>Total Transactions</div>
-          <div className={styles.card_text_last}>254,107</div>
+          <div className={styles.card_text_last}>{total}</div>
         </div>
       </div>
       <div className={styles.card}>

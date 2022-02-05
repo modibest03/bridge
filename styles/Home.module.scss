@@ -24,10 +24,31 @@
   font-size: 3.2rem;
   margin-top: 3.2rem;
   width: 20%;
+  cursor: pointer;
 
-  & > a {
+  & > div {
     display: flex;
     align-items: center;
     column-gap: 1.6rem;
+  }
+}
+
+.showing {
+  font-size: 1.6rem;
+  color: #a0a5ba;
+  margin: 2.4rem 0;
+}
+
+.text_id {
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-bottom: 2.4rem;
+
+  & > div:last-child {
+    padding: 1rem 2rem;
+    background: #000e48;
+    border-radius: 8px;
   }
 }

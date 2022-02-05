@@ -3,6 +3,7 @@
   border: 1px solid #ffffff;
   border-radius: 16px;
   padding: 2.4rem;
+  flex-basis: 45%;
 }
 
 .header {
@@ -19,6 +20,7 @@
   font-size: 1.6rem;
   padding: 8px 0;
   border-bottom: 1px solid #a0a5ba;
+  cursor: pointer;
 }
 
 .image {
@@ -39,6 +41,10 @@
     margin-left: 8px;
     color: #3964fa;
   }
+
+  & > span > img {
+    border-radius: 50%;
+  }
 }
 
 .usd {
@@ -58,4 +64,14 @@
   width: 100%;
   text-align: center;
   margin-top: 2.4rem;
+  cursor: pointer;
+}
+
+.zero {
+  font-size: 2.2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
