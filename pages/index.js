@@ -11,10 +11,7 @@ import { useSelector } from 'react-redux';
 
 export default function Home() {
   const { structuredData } = useSelector((state) => state.app);
-
   const { allTransactions, isLoadingAllTransactions } = useGetAllTransactions();
-
-  console.log(allTransactions);
 
   return (
     <div className={styles.container}>

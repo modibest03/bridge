@@ -9,7 +9,7 @@ import styles from './transactionTable.module.scss';
 
 const TransactionFetch = ({ data }) => {
   const router = useRouter();
-  //   const [text, setText] = useState('');
+  const [text, setText] = useState('');
 
   return (
     <>
