@@ -9,6 +9,7 @@ import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
+import TransactionTable from '../components/TransactionTable';
 
 export default function Home() {
   const [search, setSearch] = useState('');
@@ -27,39 +28,48 @@ export default function Home() {
       <Navbar />
 
       <div style={{ padding: '24px 50px 50px 50px' }}>
-        {isLoadingAllTransactions && (
-          <Skeleton
-            style={{ height: '70vh' }}
-            baseColor='#000e48'
-            highlightColor='#02061d'
-            duration={1}
-          />
-        )}
         {allTransactions && (
           <>
             <SearchBar search={search} setSearch={setSearch} />
-            <Cards total={allTransactions.transactions.total} />
 
-            <div style={{ width: '30px', height: '30px' }}></div>
+            {!search.length && (
+              <>
+                <Cards total={allTransactions.transactions.total} />
 
-            <div
-              style={{
-                marginTop: '56px',
-                display: 'flex',
-                justifyContent: 'space-between',
-              }}
-            >
-              <History
-                name='Latest Transactions'
-                data={structuredData?.success?.slice(0, 7)}
-                transaction={true}
+                <div style={{ width: '30px', height: '30px' }}></div>
+
+                <div
+                  style={{
+                    marginTop: '56px',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <History
+                    name='Latest Transactions'
+                    data={structuredData?.success?.slice(0, 7)}
+                    transaction={true}
+                  />
+                  <History
+                    name='Pending Transactions'
+                    data={structuredData?.pending?.slice(0, 7)}
+                    transaction={false}
+                  />
+                </div>
+              </>
+            )}
+
+            {search.length > 0 && (
+              <TransactionTable
+              // data={data}
+              // lastPage={allTransactions?.transactions?.last_page}
+              // isLoading={isLoadingAllTransactions}
+              // page={page}
+              // limit={limit}
+              // setPage={setPage}
+              // setLimit={setLimit}
               />
-              <History
-                name='Pending Transactions'
-                data={structuredData?.pending?.slice(0, 7)}
-                transaction={false}
-              />
-            </div>
+            )}
           </>
         )}
       </div>
