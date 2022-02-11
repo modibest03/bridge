@@ -72,13 +72,20 @@ const TransactionFetch = ({ data }) => {
           </td>
           <td className={styles.td}>
             <div>
-              <Image
-                src='/check-circle.png'
-                alt='icon'
-                width={16}
-                height={16}
-              />
-              <span>Success</span>
+              {obj.status === 'registered' &&
+              obj.pair_transaction.status === 'Validated' ? (
+                <>
+                  <Image
+                    src='/check-circle.png'
+                    alt='Copy Icon'
+                    width={16}
+                    height={16}
+                  />
+                  <span className={styles.green}>Success</span>
+                </>
+              ) : (
+                <div style={{ color: '#449DD1' }}>Pending</div>
+              )}
             </div>
           </td>
         </tr>
