@@ -23,13 +23,13 @@ const TransactionFetch = ({ data }) => {
           <td className={styles.td}>
             <div>
               <span>
-                {obj.pair_transaction.transaction_id.substr(0, 6)}...
-                {obj.pair_transaction.transaction_id.substr(
-                  obj.pair_transaction.transaction_id?.length - 5
+                {obj?.pair_transaction?.transaction_id.substr(0, 6)}...
+                {obj?.pair_transaction?.transaction_id.substr(
+                  obj?.pair_transaction?.transaction_id?.length - 5
                 )}
               </span>
               <div onClick={(e) => e.stopPropagation()}>
-                <CopyToClipboard text={obj.transaction_id}>
+                <CopyToClipboard text={obj?.transaction_id}>
                   <Image src='/copy.png' alt='icon' width={16} height={16} />
                 </CopyToClipboard>
               </div>

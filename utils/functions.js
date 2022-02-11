@@ -51,7 +51,7 @@ export const renderChain = (value) => {
         );
       case '80001':
         return (
-          <Image src='/polygon.png' alt='Polygon Icon' width={32} height={32} />
+          <Image src='/ellipse.png' alt='Polygon Icon' width={32} height={32} />
         );
       case '43113':
         return (

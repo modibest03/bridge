@@ -14,6 +14,8 @@ export default function Home() {
   const { structuredData } = useSelector((state) => state.app);
   const { allTransactions, isLoadingAllTransactions } = useGetAllTransactions();
 
+  console.log(structuredData);
+
   return (
     <div className={styles.container}>
       <Head>
